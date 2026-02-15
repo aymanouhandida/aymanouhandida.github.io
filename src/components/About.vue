@@ -12,7 +12,7 @@
       ></div>
     </div>
 
-    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="relative mx-auto w-full max-w-7xl 2xl:max-w-352 px-4 sm:px-6 lg:px-10">
       <div class="grid gap-10 lg:grid-cols-[3fr_2fr] lg:items-start">
         <div class="relative z-10">
           <p

@@ -12,7 +12,7 @@
       ></div>
     </div>
 
-    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="relative mx-auto w-full max-w-7xl 2xl:max-w-352 px-4 sm:px-6 lg:px-10">
       <nav class="flex items-center justify-between py-6">
         <a href="#" class="inline-flex items-center gap-2">
           <div class="leading-tight">
