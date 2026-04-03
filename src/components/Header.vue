@@ -14,7 +14,7 @@
 
     <div class="relative mx-auto w-full max-w-7xl 2xl:max-w-352 px-4 sm:px-6 lg:px-10">
       <nav class="flex items-center justify-between py-6">
-        <a href="#" class="inline-flex items-center gap-2">
+        <a href="/" class="inline-flex items-center gap-2">
           <div class="leading-tight">
             <div class="text-sm font-semibold tracking-widest">AYMAN OUHANDIDA</div>
           </div>
@@ -75,6 +75,22 @@
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
               <path
                 d="M6.94 6.5A2.06 2.06 0 1 1 6.94 2.38a2.06 2.06 0 0 1 0 4.12ZM5 21.62h3.9V8.12H5v13.5ZM13.02 8.12H9.3v13.5h3.72v-7.1c0-1.97.37-3.88 2.8-3.88 2.4 0 2.43 2.25 2.43 4v6.98H22v-7.78c0-3.82-.82-6.75-5.27-6.75-2.14 0-3.58 1.17-4.17 2.27h-.04V8.12Z"
+              />
+            </svg>
+          </a>
+
+          <a
+            :href="githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .5C5.73.5.75 5.63.75 12c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.06c-3.2.72-3.88-1.39-3.88-1.39-.53-1.37-1.29-1.73-1.29-1.73-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.23 1.79 1.23 1.04 1.82 2.73 1.29 3.4.99.11-.77.41-1.29.74-1.59-2.55-.3-5.23-1.31-5.23-5.83 0-1.29.45-2.34 1.19-3.17-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.21.92-.26 1.91-.38 2.9-.39.99.01 1.98.13 2.9.39 2.21-1.52 3.18-1.21 3.18-1.21.63 1.64.23 2.86.11 3.16.74.83 1.19 1.88 1.19 3.17 0 4.53-2.69 5.53-5.25 5.82.42.37.79 1.1.79 2.22v3.29c0 .31.21.68.79.56 4.57-1.53 7.86-5.86 7.86-10.97C23.25 5.63 18.27.5 12 .5Z"
               />
             </svg>
           </a>
@@ -257,6 +273,22 @@
                 />
               </svg>
             </a>
+
+            <a
+              :href="githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white/80 ring-1 ring-white/10 hover:text-white hover:bg-white/5 hover:ring-white/20 transition"
+            >
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 .5C5.73.5.75 5.63.75 12c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.06c-3.2.72-3.88-1.39-3.88-1.39-.53-1.37-1.29-1.73-1.29-1.73-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.23 1.79 1.23 1.04 1.82 2.73 1.29 3.4.99.11-.77.41-1.29.74-1.59-2.55-.3-5.23-1.31-5.23-5.83 0-1.29.45-2.34 1.19-3.17-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.21.92-.26 1.91-.38 2.9-.39.99.01 1.98.13 2.9.39 2.21-1.52 3.18-1.21 3.18-1.21.63 1.64.23 2.86.11 3.16.74.83 1.19 1.88 1.19 3.17 0 4.53-2.69 5.53-5.25 5.82.42.37.79 1.1.79 2.22v3.29c0 .31.21.68.79.56 4.57-1.53 7.86-5.86 7.86-10.97C23.25 5.63 18.27.5 12 .5Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -270,7 +302,7 @@
               <img
                 :src="profilePhoto"
                 alt="Portrait photo"
-                class="w-[22rem] object-cover"
+                class="w-88 object-cover"
                 loading="lazy"
               />
               <div
@@ -285,8 +317,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import profilePhoto from '@/assets/profile.png';
+import { ref } from 'vue';
 
 const open = ref(false);
 
@@ -298,4 +330,5 @@ const nav = [
 
 const instagramUrl = 'https://www.instagram.com/aymanouhandida/';
 const linkedinUrl = 'https://www.linkedin.com/in/ayman-ouhandida-23994930a/';
+const githubUrl = 'https://github.com/aymanouhandida';
 </script>

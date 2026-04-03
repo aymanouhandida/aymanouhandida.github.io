@@ -94,6 +94,23 @@
             </svg>
           </a>
 
+          <!-- GitHub -->
+          <a
+            :href="githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10 hover:ring-white/20"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-white/80" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .5C5.73.5.75 5.63.75 12c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.06c-3.2.72-3.88-1.39-3.88-1.39-.53-1.37-1.29-1.73-1.29-1.73-1.06-.74.08-.73.08-.73 1.17.08 1.79 1.23 1.79 1.23 1.04 1.82 2.73 1.29 3.4.99.11-.77.41-1.29.74-1.59-2.55-.3-5.23-1.31-5.23-5.83 0-1.29.45-2.34 1.19-3.17-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.21.92-.26 1.91-.38 2.9-.39.99.01 1.98.13 2.9.39 2.21-1.52 3.18-1.21 3.18-1.21.63 1.64.23 2.86.11 3.16.74.83 1.19 1.88 1.19 3.17 0 4.53-2.69 5.53-5.25 5.82.42.37.79 1.1.79 2.22v3.29c0 .31.21.68.79.56 4.57-1.53 7.86-5.86 7.86-10.97C23.25 5.63 18.27.5 12 .5Z"
+              />
+            </svg>
+          </a>
+
           <a
             href="#"
             aria-label="Back to top"
@@ -121,4 +138,5 @@ const year = new Date().getFullYear();
 
 const instagramUrl = 'https://www.instagram.com/aymanouhandida/';
 const linkedinUrl = 'https://www.linkedin.com/in/ayman-ouhandida-23994930a/';
+const githubUrl = 'https://github.com/aymanouhandida';
 </script>

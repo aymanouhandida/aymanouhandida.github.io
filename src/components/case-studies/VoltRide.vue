@@ -3,34 +3,43 @@
     <div class="flex items-start justify-between gap-4">
       <div>
         <div class="flex flex-wrap items-center gap-2">
-          <span class="badge2">E-commerce UI/UX</span>
-          <span class="badge2">Branding</span>
+          <span class="badge2">Brand Launch</span>
         </div>
 
-        <h3 class="mt-3 text-xl font-bold tracking-tight">Omar Shop. Arabic Perfumes</h3>
+        <h3 class="mt-3 text-xl font-bold tracking-tight">VoltRide. Electric Mobility Brand</h3>
 
         <p class="mt-2 text-sm text-white/70 leading-relaxed">
-          E-commerce concept for Arabic perfumes: premium hero, filtered listings, and clean
-          checkout.
+          Simulated launch project: built a consistent brand presence across Instagram and a Wix
+          store page.
         </p>
       </div>
     </div>
 
     <div class="mt-6 flex flex-wrap gap-2">
-      <span class="chip">Figma</span>
-      <span class="chip">Photoshop</span>
-      <span class="chip">UI Design</span>
-      <span class="chip">E-commerce</span>
+      <span class="chip">Instagram</span>
+      <span class="chip">Wix</span>
+      <span class="chip">Photoshop/Affinity</span>
+      <span class="chip">Notion/Miro</span>
     </div>
 
-    <div class="mt-7 flex flex-wrap items-center gap-3">
+    <!-- pinned to bottom -->
+    <div class="actions">
       <a
         class="btn btnPrimary"
-        href="https://omarshop-3kmk203wc-ayman-ouhandida-s-projects.vercel.app/"
+        href="https://aymanoualaeou.wixsite.com/my-site-5"
         target="_blank"
         rel="noopener noreferrer"
       >
         Website
+      </a>
+
+      <a
+        class="btn btnSecondary"
+        href="https://www.instagram.com/voltride.ma/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
       </a>
     </div>
   </article>
@@ -41,6 +50,19 @@
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.actions {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .badge2 {
@@ -96,5 +118,14 @@
 }
 .btnPrimary:hover {
   opacity: 0.92;
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 </style>

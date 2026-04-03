@@ -23,7 +23,8 @@
       <span class="chip">Social Media</span>
     </div>
 
-    <div class="mt-7 flex flex-wrap items-center gap-3">
+    <!-- pinned to bottom -->
+    <div class="actions">
       <button type="button" class="btn btnPrimary cursor-pointer" @click="open = true">
         View Screenshots
       </button>
@@ -68,6 +69,19 @@ const shots = [m1, m2, m3, m4, m5, m6];
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.actions {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .badge2 {
@@ -104,7 +118,6 @@ const shots = [m1, m2, m3, m4, m5, m6];
     background 0.2s ease,
     transform 0.15s ease;
 }
-
 .btn:active {
   transform: translateY(1px);
 }
@@ -115,10 +128,6 @@ const shots = [m1, m2, m3, m4, m5, m6];
 }
 .btnPrimary:hover {
   opacity: 0.92;
-}
-
-.btnSecondary:hover {
-  background: rgba(255, 255, 255, 0.12);
 }
 
 .overlay {
@@ -150,12 +159,6 @@ const shots = [m1, m2, m3, m4, m5, m6];
   margin: 0 0 12px;
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
-}
-
-.img {
-  width: 100%;
-  height: auto;
-  display: block;
   object-fit: cover;
 }
 </style>

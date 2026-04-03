@@ -26,7 +26,7 @@
         <div class="grid gap-5 sm:grid-cols-2">
           <div class="flex items-center gap-4 rounded-3xl bg-white/5 p-4 ring-1 ring-white/10">
             <div
-              class="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 ring-1 ring-white/10"
+              class="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 ring-1.5 ring-white/10"
             >
               <svg
                 viewBox="0 0 24 24"

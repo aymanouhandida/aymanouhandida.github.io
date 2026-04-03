@@ -1,7 +1,7 @@
 <script setup>
-import OmarShopCase from './case-studies/OmarShopCaseStudy.vue';
-import VoltRideCase from './case-studies/VoltRideCase.vue';
-import MelangeCase from './case-studies/MelangeCase.vue';
+import OmarShopCase from './case-studies/OmarShop.vue';
+import VoltRideCase from './case-studies/VoltRide.vue';
+import MelangeCase from './case-studies/Melange.vue';
 </script>
 
 <template>
