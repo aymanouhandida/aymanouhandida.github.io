@@ -91,6 +91,7 @@ import miro from '../assets/tools/miro.png';
 import notion from '../assets/tools/notion.png';
 import powerbi from '../assets/tools/powerbi.png';
 import wordpress from '../assets/tools/wordpress.png';
+import spss from '../assets/tools/spss.png';
 
 const tools = [
   { name: 'Adobe', src: adobe },
@@ -102,18 +103,20 @@ const tools = [
   { name: 'Notion', src: notion },
   { name: 'Power BI', src: powerbi },
   { name: 'WordPress', src: wordpress },
+  { name: 'Spss', src: spss },
 ];
 
 const positions = [
   { x: 12, y: 18, s: 1.05 },
   { x: 48, y: 12, s: 0.95 },
   { x: 86, y: 20, s: 1.0 },
-  { x: 22, y: 46, s: 0.92 },
+  { x: 18, y: 46, s: 0.92 },
   { x: 62, y: 40, s: 1.06 },
   { x: 90, y: 52, s: 0.9 },
   { x: 10, y: 72, s: 0.98 },
   { x: 46, y: 78, s: 0.92 },
   { x: 80, y: 86, s: 0.98 },
+  { x: 40, y: 50, s: 0.98 },
 ];
 
 const durations = ['4.3s', '5.1s', '6.4s', '7.2s', '5.7s', '4.9s', '6.9s', '5.4s', '7.8s'];

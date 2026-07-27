@@ -1,1 +1,104 @@
 @import 'tailwindcss';
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) body,
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc;
+}
+
+html:not(.dark) .text-white {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-transparent.bg-clip-text {
+  background-image: linear-gradient(to right, #0e7490, #a21caf);
+}
+
+html:not(.dark) [class~='text-white/90'] {
+  color: #1e293b;
+}
+
+html:not(.dark) [class~='text-white/80'],
+html:not(.dark) [class~='text-white/75'],
+html:not(.dark) [class~='text-white/70'] {
+  color: #475569;
+}
+
+html:not(.dark) [class~='text-white/60'],
+html:not(.dark) [class~='text-white/50'] {
+  color: #64748b;
+}
+
+html:not(.dark) [class~='text-white/40'],
+html:not(.dark) [class~='text-white/20'] {
+  color: #94a3b8;
+}
+
+html:not(.dark) [class~='bg-white/5'] {
+  background-color: rgb(15 23 42 / 0.04);
+}
+
+html:not(.dark) [class~='bg-white/10'] {
+  background-color: rgb(15 23 42 / 0.07);
+}
+
+html:not(.dark) [class~='bg-white/15'] {
+  background-color: rgb(15 23 42 / 0.1);
+}
+
+html:not(.dark) [class~='ring-white/10'] {
+  --tw-ring-color: rgb(15 23 42 / 0.1);
+}
+
+html:not(.dark) [class~='ring-white/15'],
+html:not(.dark) [class~='ring-white/20'] {
+  --tw-ring-color: rgb(15 23 42 / 0.15);
+}
+
+html:not(.dark) [class~='hover:bg-white/5']:hover,
+html:not(.dark) [class~='hover:bg-white/10']:hover {
+  background-color: rgb(15 23 42 / 0.08);
+}
+
+html:not(.dark) [class~='hover:bg-white/15']:hover {
+  background-color: rgb(15 23 42 / 0.12);
+}
+
+html:not(.dark) [class~='hover:text-white']:hover {
+  color: #0f172a;
+}
+
+html:not(.dark) .bg-white,
+html:not(.dark) .btnPrimary {
+  background-color: #0f172a;
+}
+
+html:not(.dark) .text-slate-950,
+html:not(.dark) .btnPrimary {
+  color: #fff;
+}
+
+html:not(.dark) .card {
+  background: rgb(15 23 42 / 0.04);
+  box-shadow: inset 0 0 0 1px rgb(15 23 42 / 0.1);
+  color: #0f172a;
+}
+
+html:not(.dark) .check,
+html:not(.dark) .chip,
+html:not(.dark) .btnSecondary {
+  background: rgb(15 23 42 / 0.04);
+  box-shadow: inset 0 0 0 1px rgb(15 23 42 / 0.1);
+  color: #475569;
+}
+
+html:not(.dark) .badge2 {
+  color: #0e7490;
+}

@@ -32,12 +32,44 @@
         </div>
 
         <div class="flex items-center gap-2">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+            :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+            @click="toggleTheme"
+          >
+            <svg
+              v-if="isDark"
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="3.5" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg
+              v-else
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" />
+            </svg>
+          </button>
+
           <a
             :href="instagramUrl"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
+            class="hidden sm:inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
           >
             <svg
               viewBox="0 0 24 24"
@@ -70,7 +102,7 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
+            class="hidden sm:inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
           >
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
               <path
@@ -84,7 +116,7 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            class="inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
+            class="hidden sm:inline-flex items-center justify-center rounded-xl bg-white/10 p-2 ring-1 ring-white/15 hover:bg-white/15 transition"
           >
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
               <path
@@ -321,6 +353,13 @@ import profilePhoto from '@/assets/profile.png';
 import { ref } from 'vue';
 
 const open = ref(false);
+const isDark = ref(document.documentElement.classList.contains('dark'));
+
+function toggleTheme() {
+  isDark.value = !isDark.value;
+  document.documentElement.classList.toggle('dark', isDark.value);
+  localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
+}
 
 const nav = [
   { label: 'About', href: '#about' },

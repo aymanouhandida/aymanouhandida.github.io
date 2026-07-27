@@ -1,7 +1,35 @@
 <script setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+import ClassyStyleCase from './case-studies/ClassyStyle.vue';
+import MelangeCase from './case-studies/Melange.vue';
 import OmarShopCase from './case-studies/OmarShop.vue';
 import VoltRideCase from './case-studies/VoltRide.vue';
-import MelangeCase from './case-studies/Melange.vue';
+
+const projectsTrack = ref(null);
+const canScrollPrevious = ref(false);
+const canScrollNext = ref(false);
+
+function updateScrollButtons() {
+  const track = projectsTrack.value;
+  if (!track) return;
+
+  canScrollPrevious.value = track.scrollLeft > 1;
+  canScrollNext.value = track.scrollLeft < track.scrollWidth - track.clientWidth - 1;
+}
+
+function scrollProjects(direction) {
+  projectsTrack.value?.scrollBy({
+    left: direction * projectsTrack.value.clientWidth,
+    behavior: 'smooth',
+  });
+}
+
+onMounted(() => {
+  updateScrollButtons();
+  window.addEventListener('resize', updateScrollButtons);
+});
+
+onUnmounted(() => window.removeEventListener('resize', updateScrollButtons));
 </script>
 
 <template>
@@ -39,11 +67,70 @@ import MelangeCase from './case-studies/Melange.vue';
         </p>
       </div>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <VoltRideCase />
-        <OmarShopCase />
-        <MelangeCase />
+      <div class="relative mt-10">
+        <button
+          v-show="canScrollPrevious"
+          type="button"
+          aria-label="Previous projects"
+          class="absolute top-0 left-1 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-slate-950 shadow-lg ring-1 ring-white/15 transition hover:scale-105 sm:top-1/2 sm:-left-5"
+          @click="scrollProjects(-1)"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div
+          ref="projectsTrack"
+          class="projects-track flex gap-6 overflow-x-auto scroll-smooth"
+          @scroll.passive="updateScrollButtons"
+        >
+          <div class="project-slide"><VoltRideCase /></div>
+          <div class="project-slide"><OmarShopCase /></div>
+          <div class="project-slide"><MelangeCase /></div>
+          <div class="project-slide"><ClassyStyleCase /></div>
+        </div>
+
+        <button
+          v-show="canScrollNext"
+          type="button"
+          aria-label="Next projects"
+          class="absolute top-0 right-1 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-slate-950 shadow-lg ring-1 ring-white/15 transition hover:scale-105 sm:top-1/2 sm:-right-5"
+          @click="scrollProjects(1)"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.projects-track {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.projects-track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .project-slide {
+    flex-basis: calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-slide {
+    flex-basis: calc((100% - 3rem) / 3);
+  }
+}
+</style>
